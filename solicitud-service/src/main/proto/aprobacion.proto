@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.example.grpc;
+
+option java_package = "com.example.grpc";
+option java_outer_classname = "AprobacionServiceProto";
+
+service AprobacionService {
+  rpc ValidarSolicitud (ValidarSolicitudRequest) returns (ValidarSolicitudResponse);
+}
+
+message ValidarSolicitudRequest {
+  double monto = 1;
+}
+
+message ValidarSolicitudResponse {
+  bool aprobado = 1;
+}

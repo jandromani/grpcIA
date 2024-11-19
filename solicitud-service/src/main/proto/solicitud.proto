@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.example.grpc;
+
+option java_package = "com.example.grpc";
+option java_outer_classname = "SolicitudServiceProto";
+
+service SolicitudService {
+  rpc ObtenerSolicitud (ObtenerSolicitudRequest) returns (ObtenerSolicitudResponse);
+}
+
+message ObtenerSolicitudRequest {
+  int64 id = 1;
+}
+
+message ObtenerSolicitudResponse {
+  int64 id = 1;
+  string solicitante = 2;
+  double monto = 3;
+  string estado = 4;
+}
