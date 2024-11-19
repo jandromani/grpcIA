@@ -18,6 +18,9 @@ La aplicación está dividida en varios microservicios que interactúan entre s�
 - Gestiona la creación, actualización y consulta de solicitudes.
 - Maneja lógica de negocio clave como asignación de aprobadores, cancelación de solicitudes y auditoría.
 
+  ![image](https://github.com/user-attachments/assets/169106ed-7912-4728-b2d8-a96ac2356fb8)
+
+
 #### **1.3. Aprobación Service**
 - Gestiona las reglas de aprobación dinámicas.
 - Valida solicitudes basándose en reglas configurables.
@@ -39,10 +42,16 @@ La aplicación está dividida en varios microservicios que interactúan entre s�
 - **Tópicos configurados:**
   - `solicitud-events`: Eventos relacionados con cambios en las solicitudes.
   - `notificaciones`: Envío de notificaciones por cambios de estado.
+ 
+    ![image](https://github.com/user-attachments/assets/20b6e3de-ac60-4e49-8723-3ecef30dd92e)
+
 
 #### **2.2. gRPC**
 - Protocolo de comunicación de alto rendimiento entre microservicios.
 - Implementado en **Solicitud Service** y **Aprobación Service**.
+
+![image](https://github.com/user-attachments/assets/6e811606-4425-47a3-b793-422b968895b8)
+
 
 ---
 
@@ -65,6 +74,8 @@ Cada microservicio utiliza una base de datos **PostgreSQL** independiente:
 - **Notificaciones**: Integra Kafka para enviar notificaciones sobre cambios de estado.
 - **Auditoría**: Registra todas las acciones realizadas sobre una solicitud.
 - **IA y Análisis**: Proporciona inteligencia procesable para priorización, validación y reportes.
+
+![image](https://github.com/user-attachments/assets/469f8981-154e-4e7f-be70-c63804afd8e2)
 
 ---
 
@@ -101,6 +112,7 @@ Cada microservicio utiliza una base de datos **PostgreSQL** independiente:
 
 10. **Análisis de Datos**
     - Analiza patrones en las solicitudes, como tasas de aprobación y rechazo.
+![image](https://github.com/user-attachments/assets/2429b76b-86d6-4a7a-9636-acadbf6b43e8)
 
 ---
 
@@ -114,43 +126,6 @@ Cada microservicio utiliza una base de datos **PostgreSQL** independiente:
 - **Python (Flask)**: Implementación de servicios de IA.
 - **Docker**: Contenerización de servicios.
 - **Swagger**: Documentación de APIs.
-
----
-
-## **Estructura de Carpetas**
-project-root/
-├── api-gateway/
-│   ├── src/main/java/com/example/apigateway/
-│   │   ├── ApiGatewayApplication.java
-│   │   ├── config/
-│   │   ├── controller/
-│   │   ├── dto/
-│   │   ├── exception/
-│   ├── resources/application.yml
-├── solicitud-service/
-│   ├── src/main/java/com/example/solicitud/
-│   │   ├── domain/
-│   │   ├── application/
-│   │   ├── controller/
-│   │   ├── infrastructure/
-│   ├── resources/application.yml
-├── aprobacion-service/
-│   ├── src/main/java/com/example/aprobacion/
-│   │   ├── domain/
-│   │   ├── application/
-│   │   ├── controller/
-│   │   ├── infrastructure/
-│   ├── resources/application.yml
-├── ia-service/
-│   ├── src/main/python/
-│   │   ├── flask_app.py
-│   │   ├── models/
-├── config-server/
-│   ├── src/main/java/com/example/configserver/
-│   ├── resources/application.yml
-├── docker-compose.yml
-├── pom.xml
-
 
 ---
 
